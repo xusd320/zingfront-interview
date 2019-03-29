@@ -27,6 +27,7 @@ def matrixTree(matrix):
                 left  = genTree(node(val = { 'x' : x + 1, 'y' : y + 1, 'data' : matrix[x + 1][y + 1] })),
                 right = genTree(node(val = { 'x' : x, 'y' : y + 2, 'data' : matrix[x][y + 2]})) if y < n -2 else None
             )
+
             return root
 
         elif x < m -1:
@@ -36,6 +37,7 @@ def matrixTree(matrix):
             )
 
             return root
+
         elif y < n -1:
             root.right= node(
                 val   = {'x' : x, 'y' : y + 1, 'data' :  matrix[x][y + 1]},
@@ -43,13 +45,14 @@ def matrixTree(matrix):
             )
 
             return root
+
         else: 
            
             return node({'x' : x, 'y' : y, 'data' : matrix[x][y]})
 
     return genTree(root)
 
-    
+'''    
 def btreepaths(root):
     if not root:
         return []
@@ -67,6 +70,7 @@ def btreepaths(root):
             continue
     return res
 
-#a = [[1,1,2],[1,2,4], [-1, -2,1]]
-#tree = matrixTree(a)
-#print(btreepaths(tree))
+a = [[1,1,2],[1,2,4], [-1, -2,1]]
+tree = matrixTree(a)
+print(btreepaths(tree))
+'''

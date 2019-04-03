@@ -43,7 +43,7 @@ def btreepaths(hero, gameTree):
             stack.append((node.left, ls + [ node.val ]))
         if node.right:
             stack.append((node.right, ls + [ node.val ]))
-            continue
+            
     return res
 
 def heroChoice(heros, gameMap):

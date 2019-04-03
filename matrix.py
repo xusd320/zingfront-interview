@@ -18,7 +18,7 @@ class Chess():
             #以(x,y)为中心，在周围的8个字符中寻找字符s,若找不到，说明此查找路径走不通,直到string中所有字符命中
             for i in range(x-1, x + 2):
                 for j in range(y -1, y + 2):
-                    #防止找到(x,y)自生和越出期盼边界
+                    #防止找到(x,y)自身和越出棋盘边界
                     if not (i == x and j == y) and i in range(self.m) and j in range(self.n):
                         if self.board[i][j] == s:
                             hit = True
